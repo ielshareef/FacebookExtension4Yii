@@ -50,7 +50,7 @@ class FacebookUserIdentity extends FacebookComponent implements IUserIdentity {
 		  'appId'  => $this->key,
 		  'secret' => $this->secret,
 		));
-		$here = 'http://localhost/voterspring/index.php?r=site/faceboklogin';
+		$here = Yii::app()->request->hostInfo . Yii::app()->request->url;
 		// Get User ID
 		$user = $facebook->getUser();
 		
